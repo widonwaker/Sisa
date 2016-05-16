@@ -18,16 +18,7 @@
 <script type="text/javascript" src="js/jquery.gdocsviewer.min.js"></script>
 
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
- <script type="text/javascript">
- $(document).ready(function() {
- $.getJSON("json.php",function(result){
- $.each(result, function(i, field){
- $("#output").append("Title: "+ field.nome + " duration: "+field.eta +"<br/>");
- });
- });
- });
- </script>
- 
+
 
 
 </head>
@@ -36,16 +27,13 @@
 <div data-role="page" id="lettura">
 <div data-role="header">
 <a href="#" data-role="button" data-icon="home" data-rel="back">Home</a>
-<h1>App Prova</h1>
-<a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Pulsante prova provoloso</a>
+<h1><img src="images/app/sisa_logo_nav.png" id="navImg"/></h1>
+<a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
 </div>
 <div data-role="content">
-<h2>Lettura DB</h2>
-       <div id="output"></div>
-<a href="#" onClick="window.open(encodeURI('https://docs.google.com/gview?embedded=true&url=http://www.pdf995.com/samples/pdf.pdf'), '_blank', 'location=yes,EnableViewPortScale=yes');">Apri</a>
 
 </div>
-<iframe src="https://docs.google.com/gview?embedded=true&url=http://www.pdf995.com/samples/pdf.pdf" width="90%" height="90%"></iframe>
+<iframe src="https://docs.google.com/gview?embedded=true&url=http://www.pdf995.com/samples/pdf.pdf" width="100%" height="90%" align="center"></iframe>
 </div>
 
 <div data-role="page" id="info">
