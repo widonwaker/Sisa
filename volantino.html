@@ -14,6 +14,9 @@
 
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aclonica:n4:default.js" type="text/javascript"></script>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.gdocsviewer.min.js"></script>
+
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  <script type="text/javascript">
  $(document).ready(function() {
@@ -39,15 +42,19 @@
 <div data-role="content">
 <h2>Lettura DB</h2>
        <div id="output"></div>
-<a href="#" onClick="window.open('http://docs.google.com/viewer?url=https://www.antennahouse.com/XSLsample/pdf/sample-link_1.pdf', '_system', 'location=yes');">Apri</a>
+<!--<a href="#" onClick="window.open('https://www.antennahouse.com/XSLsample/pdf/sample-link_1.pdf', '_blank', 'location=yes');">Apri</a>-->
+<a href="http://www.riciclalolio.it/wp-content/uploads/2012/11/brochure_a4_smallrev_reg_web.pdf" class="embedpdf">Download file</a>
+<script>
+$('a.embedpdf').gdocsViewer({ width: 90%, height: 90% });
+</script>
 </div>
 </div>
 
 <div data-role="page" id="info">
   <div data-role="header">
-    <h1>Info</h1>
+    <h1>Crediti</h1>
   </div>
-  <div data-role="content">App di prova creata da Stefano Iodice</div>
+  <div data-role="content"><center>Autore: InformaticaTeam<br>Sviluppatore: Stefano Iodice</center></div>
 </div>
 </body>
 </html>
