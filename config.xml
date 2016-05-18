@@ -9,11 +9,11 @@
     <name>Sisa Supermercati</name>
 
     <description>
-        Questa è una applicazione di test
+        Sisa Supermercati Applicazione
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        Stefano Team
+        InformaticaTeam
     </author>
 
     <!--
@@ -132,5 +132,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+	<platform name="windows" />
 
 </widget>
