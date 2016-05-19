@@ -26,21 +26,11 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 } 
-#home .ui-content .ui-grid-b {
-	text-align: center;
-	bottom: 0px;	
-
-}
-.ui-grid-b .ui-block-a .ui-btn.ui-corner-all.ui-shadow {
-	height: 100px;
-}
-.ui-grid-b .ui-block-b .ui-btn.ui-corner-all.ui-shadow {
-	height: 100px;
-}
-.ui-grid-b .ui-block-c .ui-btn.ui-corner-all.ui-shadow {
-	height: 100px;
-}
 #lettura {
 	height: 90%;
 
+}
+#home .ui-content .ui-grid-c {
+	text-align: center;
+	font-size: small;
 }
