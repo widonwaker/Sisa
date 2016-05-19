@@ -1,0 +1,218 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Applicazione Web jQuery Mobile</title>
+<meta name="viewport" content="width=device-width; inizial-scale=1.0" >
+<link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link href="themes/Prova.css" rel="stylesheet" type="text/css"/>
+<link href="themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aclonica:n4:default.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <!-- use jssor.slider.debug.js instead for debug -->
+    <script>
+        jQuery(document).ready(function ($) {
+            
+            var jssor_1_SlideoTransitions = [
+              [{b:0,d:600,y:-290,e:{y:27}}],
+              [{b:0,d:1000,y:185},{b:1000,d:500,o:-1},{b:1500,d:500,o:1},{b:2000,d:1500,r:360},{b:3500,d:1000,rX:30},{b:4500,d:500,rX:-30},{b:5000,d:1000,rY:30},{b:6000,d:500,rY:-30},{b:6500,d:500,sX:1},{b:7000,d:500,sX:-1},{b:7500,d:500,sY:1},{b:8000,d:500,sY:-1},{b:8500,d:500,kX:30},{b:9000,d:500,kX:-30},{b:9500,d:500,kY:30},{b:10000,d:500,kY:-30},{b:10500,d:500,c:{x:87.50,t:-87.50}},{b:11000,d:500,c:{x:-87.50,t:87.50}}],
+              [{b:0,d:600,x:410,e:{x:27}}],
+              [{b:-1,d:1,o:-1},{b:0,d:600,o:1,e:{o:5}}],
+              [{b:-1,d:1,c:{x:175.0,t:-175.0}},{b:0,d:800,c:{x:-175.0,t:175.0},e:{c:{x:7,t:7}}}],
+              [{b:-1,d:1,o:-1},{b:0,d:600,x:-570,o:1,e:{x:6}}],
+              [{b:-1,d:1,o:-1,r:-180},{b:0,d:800,o:1,r:180,e:{r:7}}],
+              [{b:0,d:1000,y:80,e:{y:24}},{b:1000,d:1100,x:570,y:170,o:-1,r:30,sX:9,sY:9,e:{x:2,y:6,r:1,sX:5,sY:5}}],
+              [{b:2000,d:600,rY:30}],
+              [{b:0,d:500,x:-105},{b:500,d:500,x:230},{b:1000,d:500,y:-120},{b:1500,d:500,x:-70,y:120},{b:2600,d:500,y:-80},{b:3100,d:900,y:160,e:{y:24}}],
+              [{b:0,d:1000,o:-0.4,rX:2,rY:1},{b:1000,d:1000,rY:1},{b:2000,d:1000,rX:-1},{b:3000,d:1000,rY:-1},{b:4000,d:1000,o:0.4,rX:-1,rY:-1}]
+            ];
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $Idle: 2000,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions,
+                $Breaks: [
+                  [{d:2000,b:1000}]
+                ]
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+	<div data-role="header" id="header">
+    
+		<h1><img src="images/app/sisa_logo_nav.png" id="navImg"/></h1>
+		<a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
+	</div>
+	<div data-role="content" id="content">	
+
+<!--<ul data-role="listview" id="footer">
+	  <li><a href="#Struttura">Struttura</a></li>
+			<li><a href="#" onClick="location.href='contatti.html'">Contatti</a></li>
+            <li><a href="#" onClick="location.href='lettura.html'">Lettura da DB</a></li>
+		</ul>-->
+
+    </div>
+   
+   
+    <!-- INIZIO SLIDER -->
+          <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; width: 100%; height: 90%; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <!--<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>-->
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; right: 10px; width: 100%; height: 100%; overflow: hidden;">
+            <div data-p="112.50" style="display: none;">
+                <a href="#" onClick="location.href='prodotti.html#biscotti'"><img data-u="image" src="images/app/002.jpg" /></a>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <a href="#" onClick="location.href='prodotti.html#mortadella'"><img data-u="image" src="images/app/007.jpg" /></a>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <a href="#" onClick="location.href='prodotti.html#bevande'"><img data-u="image" src="images/app/003.jpg" /></a>
+            </div>
+    
+        
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    </div>
+   
+   
+  <div data-role="main" class="ui-content">
+    
+    <div class="ui-grid-c">
+      <div class="ui-block-a">
+        <a href="#" onClick="location.href='volantino.html'" class="ui-btn ui-corner-all ui-shadow"><img src="images/app/volantino.png" height="100%" width="100%"/></a><br>
+        <span>Volantino</span>
+      </div>
+      <div class="ui-block-b">
+        <a href="#" onClick="location.href='prodotti.html'" class="ui-btn ui-corner-all ui-shadow"><img src="images/app/prodotti.png" height="100%" width="100%"/></a><br>
+        <span>Prodotti locali</span>
+      </div>
+      <div class="ui-block-c">
+        <a href="#dovesiamo" class="ui-btn ui-corner-all ui-shadow"><img src="images/app/geo.png" height="100%" width="100%"/></a><br>
+        <span>Dove Siamo</span>
+      </div>
+      <div class="ui-block-d">
+        <a href="#about" class="ui-btn ui-corner-all ui-shadow"><img src="images/app/about.png" height="100%" width="100%"/></a><br>
+        <span>Chi Siamo</span>
+      </div>
+    </div>
+  </div>
+ 
+ 
+
+</div>
+
+<div data-role="page" id="about">
+	<div data-role="header"><a href="#" data-role="button" data-icon="home" data-rel="back">Home</a>
+		<h1><img src="images/app/sisa_logo_nav.png" id="navImg"/></h1>
+        <a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
+	</div>
+	<div data-role="content">
+	  <h2> Chi Siamo </h2>
+      
+<p>SISA, fondata a Carpi il 22 maggio 1975, dall’idea di un gruppo di commercianti che avevano trasformato i propri negozi in superette o supermercati e che volevano costituire un gruppo per fare acquisti in comune. E così venivano poste le basi che ancora oggi animano il gruppo, coesione e spirito di squadra, confronto aperto nel rispetto reciproco tra i soci.
+
+Il gruppo sente la necessità di divenire una realtà a livello nazionale e non interregionale con la necessità di avere una insegna comune, immediatamente identificabile con il gruppo. Il numero dei Soci cresce rapidamente e con lo sviluppo progressivo dei vari Cedi, con maggior potere contrattuale con l’industria e approvvigionamenti tempestivi consentono un miglioramento delle performance dei supermercati. Passo successivo l’adozione di una insegna comune; nel contempo il lancio sul mercato dei primi prodotti a marchio SISA.
+
+Una evoluzione continua e un ammodernamento del marchio SISA fino all’introduzione del claim che caratterizza l’insegna: I Supermercati Italiani.</p>
+<p>Sito web: www.sisagruppodipalo.com - Email: info@sisagruppodipalo.com</p>
+    </div>
+
+</div>
+
+
+<div data-role="page" id="dovesiamo">
+	<div data-role="header"><a href="#" data-role="button" data-icon="home" data-rel="back">Home</a>
+		<h1><img src="images/app/sisa_logo_nav.png" id="navImg"/></h1>
+        <a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
+	</div>
+	<div data-role="content">
+	  <h2> Come Raggiungerci </h2>
+      
+<p>Seleziona un punto vendita:</p>
+   <ul data-role="listview">
+  <li>
+    <a href="#" onClick="location.href='puntovendita1.html'" >
+    <img src="res/icon/android/icon-72-hdpi.png">
+    <h2>Portici</h2>
+    <p>Corso Garibaldi, 185. Clicca per aprire la mappa. </p>
+    </a>
+  </li>
+  <li>
+    <a href="#" >
+    <img src="res/icon/android/icon-72-hdpi.png">
+    <h2>Ercolano</h2>
+    <p>Via Benedetto Cozzolino, 10. Clicca per aprire la mappa. </p>
+    </a>
+  </li>
+  <li>
+    <a href="#" >
+    <img src="res/icon/android/icon-72-hdpi.png">
+    <h2>Ercolano</h2>
+    <p>Via Madonnelle, 75. Clicca per aprire la mappa. </p>
+    </a>
+  </li>
+</ul> 
+   </div>
+
+</div>
+
+
+
+<div data-role="page" id="info">
+  <div data-role="header">
+    <h1>Crediti</h1>
+  </div>
+  <div data-role="content"><center>Distributore: InformaticaTeam<br>Sviluppatore: Stefano Iodice</center></div>
+</div>
+
+</body>
+</html>
