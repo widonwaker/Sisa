@@ -4,23 +4,8 @@
 <meta charset="utf-8">
 <title>Applicazione Web jQuery Mobile</title>
 <meta name="viewport" content="width=device-width; inizial-scale=1.0" >
-    <script>
-	document.addEventListener('deviceready', function () {
-  // Enable to debug issues.
-  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-  
-  var notificationOpenedCallback = function(jsonData) {
-    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-  };
-
-  window.plugins.OneSignal.init("852b5fe5-9d76-49e5-a804-1650a055b2af",
-                                 {googleProjectNumber: "790260643795"},
-                                 notificationOpenedCallback);
-  
-  // Show an alert box if a notification comes in when the user is in your app.
-  window.plugins.OneSignal.enableInAppAlertNotification(true);
-  }, false);
-	</script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
 <link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
 <link href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
 <link href="themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
