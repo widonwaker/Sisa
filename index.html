@@ -33,7 +33,11 @@
 
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aclonica:n4:default.js" type="text/javascript"></script>
 
-
+<style>
+.wrap {
+    white-space: normal !important;
+}
+ </style>
 <style>
     .swiper-container {
         width: 100%;
@@ -106,7 +110,7 @@
         <span>Volantino</span>
       </div>
       <div class="ui-block-b">
-        <a href="#" onClick="location.href='prodotti.html'" class="ui-btn ui-corner-all ui-shadow"><img src="images/app/prodotti.png" width="100%"/></a><br>
+        <a href="#prodotti" class="ui-btn ui-corner-all ui-shadow"><img src="images/app/prodotti.png" width="100%"/></a><br>
         <span>Prodotti locali</span>
       </div>
       <div class="ui-block-c">
@@ -156,35 +160,35 @@ Una evoluzione continua e un ammodernamento del marchio SISA fino all’introduz
     <a href="#" onClick="location.href='puntovendita1.html'" >
     <img src="res/icon/android/icon-72-hdpi.png">
     <h2>Portici</h2>
-    <p>Corso Garibaldi, 185</p>
+    <p class="wrap">Corso Garibaldi, 185</p>
     </a>
   </li>
   <li>
     <a href="#" onClick="location.href='puntovendita2.html'">
     <img src="res/icon/android/icon-72-hdpi.png">
     <h2>Portici</h2>
-    <p>Viale Bernini 11/13</p>
+    <p class="wrap">Viale Bernini 11/13</p>
     </a>
   </li>
   <li>
     <a href="#" onClick="location.href='puntovendita3.html'">
     <img src="res/icon/android/icon-72-hdpi.png">
     <h2>Portici</h2>
-    <p>Piazza Gravina 13/14 - 16/17</p>
+    <p class="wrap">Piazza Gravina 13/14 - 16/17</p>
     </a>
   </li>
   <li>
      <a href="#" onClick="location.href='puntovendita4.html'">
     <img src="res/icon/android/icon-72-hdpi.png">
     <h2>Ercolano</h2>
-    <p>Via Benedetto Cozzolino, 10</p>
+    <p class="wrap">Via Benedetto Cozzolino, 10</p>
     </a>
   </li>
   <li>
      <a href="#" onClick="location.href='puntovendita5.html'">
     <img src="res/icon/android/icon-72-hdpi.png">
     <h2>Ercolano</h2>
-    <p>Via Madonnelle,75</p>
+    <p class="wrap">Via Madonnelle,75</p>
     </a>
   </li>
 </ul> 
@@ -192,7 +196,28 @@ Una evoluzione continua e un ammodernamento del marchio SISA fino all’introduz
 
 </div>
 
+<div data-role="page" id="prodotti">
+	<div data-role="header"><a href="#" data-role="button" data-icon="home" data-rel="back">Home</a>
+		<h1><img src="images/app/sisa_logo_nav.png" id="navImg"/></h1>
+        <a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
+	</div>
+	<div data-role="content">
+	  <h2> Prodotti in offerta </h2>
+      
+  <div data-role="collapsible">
+  <h1>Seleziona un punto vendita:</h1>
+  <ul data-role="listview" data-inset="true">
+  <li><a href="#" onClick="location.href='prodotti1.html'">Tutti</a></li>
+  <li><a href="#" onClick="location.href='prodotti2.html'">Corso Garibaldi, 185</a></li>
+  <li><a href="#" onClick="location.href='prodotti3.html'">Viale Bernini 11/13</a></li>
+  <li><a href="#" onClick="location.href='prodotti4.html'">Piazza Gravina 13/14 - 16/17</a></li>
+  <li><a href="#" onClick="location.href='prodotti5.html'">Via Benedetto Cozzolino, 10</a></li>
+  <li><a href="#" onClick="location.href='prodotti6.html'">Via Madonnelle,75</a></li>
+  </ul>
+  </div>
+   </div>
 
+</div>
 
 <div data-role="page" id="info">
   <div data-role="header">
