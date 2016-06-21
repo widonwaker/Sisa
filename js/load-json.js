@@ -32,7 +32,8 @@ $(document).ready(function(){
 			
 		},
 		error: function(){
-		   output.text('There was an error loading the data.');
+			$( "#popupDialog" ).popup( "open" )
+		   //output.text('Non sei connesso ad internet! Abilita una connessione dati e riavvia l\'app!');
 		}
 	});
 	
