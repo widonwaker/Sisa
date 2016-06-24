@@ -70,7 +70,7 @@
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     
-        
+        <plugin name="Geolocation" value="CDVLocation" />
 	<gap:plugin name="onesignal-cordova-plugin" source="npm" />
 
     
