@@ -30,10 +30,9 @@
 var yourLatLng;
 var resortLatLng;
 var directionsService=new google.maps.DirectionsService();
-$(this).ready(init);
-function init() {
+document.addEventListener("deviceready", function(){
    watchID=navigator.geolocation.getCurrentPosition(positionOK, positionError);
-}
+}, false);
 function positionOK(position) {
    yourLat=position.coords.latitude;
    yourLgt=position.coords.longitude;
