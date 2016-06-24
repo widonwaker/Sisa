@@ -117,9 +117,6 @@
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
     </gap:config-file>
-	<gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription">
-    <string>SuperD vorrebbe accedere alla tua posizione attuale</string>
-    </gap:config-file>
 
     <!--
         Define access to external domains.
@@ -147,6 +144,9 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <gap:config-file platform="ios" target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+        <string>SuperD vorrebbe accedere alla tua posizione attuale</string>
+        </gap:config-file>
     </platform>
 	<platform name="windows" />
 
