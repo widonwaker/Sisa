@@ -12,14 +12,10 @@
         SuperD Supermercati Gruppo Di Palo
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
+    <author href="http://www.informaticateam.net/" email="info@informaticateam.net">
         InformaticaTeam e Stefano Iodice
     </author>
-    
-    <!--nascondi UI ios-->
-<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
-    <false/>
-</gap:config-file>
+
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
@@ -121,6 +117,9 @@
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
     </gap:config-file>
+	<gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription">
+    <string>SuperD vorrebbe accedere alla tua posizione attuale</string>
+    </gap:config-file>
 
     <!--
         Define access to external domains.
@@ -138,7 +137,7 @@
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    allow-intent href="tel:*" />
+    <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
