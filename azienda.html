@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Volantini</title>
+<meta name="viewport" content="width=device-width; inizial-scale=1.0" >
+<link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link href="themes/Prova.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
+<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aclonica:n4:default.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.gdocsviewer.min.js"></script>
+
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+        
+            $.ajax('http://gestisciapp.it/gruppodipalo/db_to_app_azienda.php', 
+                {
+                    dataType: "json",
+                    jsonp: "jsoncallback",
+                    method: 'get',
+                    contentType: 'application/json',
+                    success: function (data, status) {
+                        $.each(data, function (i, item) {
+                            document.getElementById("output").innerHTML = item.descrizione;
+							var telefono = "tel:+39" + item.telefono;
+							var email = "mailto:" + item.email;
+							document.getElementById("telefono").setAttribute("href",telefono);
+							document.getElementById("email").setAttribute("href",email);
+                        });
+                    },
+                    error: function (xhr, d, s) {
+                        $('#output').empty().html(s);
+                    }
+                });
+       
+    </script>
+</head>
+
+<body>
+<div data-role="page" id="lettura">
+<div data-role="header">
+<a href="#" data-role="button" data-icon="home" data-rel="back" data-iconpos="notext">Home</a>
+<h1><img src="images/app/sisa_logo_nav.png" id="navImg"/></h1>
+<a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
+</div>
+<div data-role="content">
+<p id="output"></p>
+<div style="text-align:center;">
+<a href="#" id="telefono"><img src="images/app/tel.png" data-inline="true" style="width:20%!important;height:auto!important;margin-right:10px;"></a>
+<a href="#" id="email"><img src="images/app/email.png" data-inline="true" style="width:20%!important;height:auto!important;margin-right:10px;"></a>
+<a href="#" onclick="cordova.InAppBrowser.open('http://www.gruppodipalo.eu', '_blank', 'location=no,toolbarposition=top,closebuttoncaption=Chiudi')"><img src="images/app/web.png" data-inline="true" style="width:20%!important;height:auto!important;"></a>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="info">
+  <div data-role="header">
+    <h1>Crediti</h1>
+  </div>
+  <div data-role="content"><center>Distributore: InformaticaTeam<br>Sviluppatore: Stefano Iodice</center></div>
+</div>
+</body>
+</html>
