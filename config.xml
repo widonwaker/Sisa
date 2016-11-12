@@ -4,8 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "it.gestisciapp.superd"
-        version   = "1.0.1"
-	ios-CFBundleVersion = "1.0.1">
+        version   = "1.0.2"
+	ios-CFBundleVersion = "1.0.2">
 
     <name>Supermercati Gruppo Di Palo</name>
 
@@ -151,10 +151,10 @@
         <false/>
         </gap:config-file>
 	<gap:config-file platform="ios" parent="CFBundleVersion">
-                <string>1.0.1</string>
+                <string>1.0.2</string>
         </gap:config-file>
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-                <string>1.0.1</string>
+                <string>1.0.2</string>
         </gap:config-file>
     </platform>
 
